@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "emp-ui"
+    }
+  },
+  "defaultProject": "emp-ui",
+  "cli": {
+    "analytics": false
+  }
 }
