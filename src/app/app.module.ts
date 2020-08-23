@@ -3,12 +3,14 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { EmpLoginComponent } from './emp-login/emp-login.component';
+import { HeaderComponent } from './component/header/header.component';
+import { EmapComponent } from './component/emap/emap.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    EmpLoginComponent
+    HeaderComponent,
+    EmapComponent
   ],
   imports: [
     BrowserModule,
