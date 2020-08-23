@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {EmpAuthValue} from "../../model/EmpAuthValue";
+
 
 @Component({
   selector: 'app-emap',
@@ -6,10 +8,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./emap.component.scss']
 })
 export class EmapComponent implements OnInit {
+  public authValue: EmpAuthValue = new EmpAuthValue();
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit(): void {
   }
 
+  authenticate(): void {
+    console.warn("Authenticating user: " + this.authValue.email)
+  }
 }
