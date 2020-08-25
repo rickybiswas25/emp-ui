@@ -1,6 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {EmpAuthValue} from "../../model/EmpAuthValue";
 
+import {EmapAuthService} from "../../service/emap-auth.service";
+
 
 @Component({
   selector: 'app-emap',
@@ -10,12 +12,12 @@ import {EmpAuthValue} from "../../model/EmpAuthValue";
 export class EmapComponent implements OnInit {
   public authValue: EmpAuthValue = new EmpAuthValue();
 
-  constructor() {}
+  constructor(private emapAuthService: EmapAuthService) {}
 
   ngOnInit(): void {
   }
 
   authenticate(): void {
-    console.warn("Authenticating user: " + this.authValue.email)
+    console.log(this.emapAuthService.authenticate(this.authValue));
   }
 }
