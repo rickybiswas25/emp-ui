@@ -1,4 +1,4 @@
 export class EmpAuthValue {
-  email: String;
+  username: String;
   password: String;
 }

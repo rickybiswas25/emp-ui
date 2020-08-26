@@ -11,13 +11,20 @@ import {EmapAuthService} from "../../service/emap-auth.service";
 })
 export class EmapComponent implements OnInit {
   public authValue: EmpAuthValue = new EmpAuthValue();
+  private tokenValue: String = '';
 
-  constructor(private emapAuthService: EmapAuthService) {}
+  constructor(private emapAuthService: EmapAuthService) {
+  }
 
   ngOnInit(): void {
   }
 
   authenticate(): void {
-    console.log(this.emapAuthService.authenticate(this.authValue));
+    this.emapAuthService.authenticate(this.authValue)
+      .subscribe(
+        (val) => {
+          this.tokenValue = val.token
+          console.log("Token found " + this.tokenValue)
+        });
   }
 }

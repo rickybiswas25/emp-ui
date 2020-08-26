@@ -1,7 +1,7 @@
 <div class="login-page">
   <div class="form" >
     <form class="login-form" (ngSubmit)="authenticate()" method="post">
-      <input id="user-login-id" [(ngModel)]="authValue.email" type="text" placeholder="Email" name="email"
+      <input id="user-login-id" [(ngModel)]="authValue.username" type="text" placeholder="username" name="username"
              required/>
       <input id="user-password" type="password" [(ngModel)]="authValue.password" name="user-password" placeholder="password" required/>
       <button>login</button>
