@@ -7,12 +7,14 @@ import { HeaderComponent } from './component/header/header.component';
 import { EmapComponent } from './component/emap/emap.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { MainPageComponent } from './component/main-page/main-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     EmapComponent,
+    MainPageComponent,
   ],
   imports: [
     BrowserModule,
